@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Undangan Pernikahan Sasa & Aldy</title>
+    <meta name="title" content="Undangan Pernikahan Sajidah & Aldy">
+    <meta name="description" content="Undangan Pernikahan Sajidah & Aldy">
+	<meta property="og:image" content="assets/images/1.jpeg" />
+	<meta property="og:image:secure_url" content="assets/images/1.jpeg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/icon-192x192.png">
+    <meta name="theme-color" content="#A59D84">
+    <meta name="color-scheme" content="dark">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+	<link rel="stylesheet" href="./css/app.css">
+    <style>
+        body {
+            margin-left: 20%;
+            margin-right: 20%;
+			transition: background-color 0.5s ease-in-out;
+			background-color: #575248;
+			color:#fff;
+        }
+        .navbar {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        @media (max-width: 768px) {
+            body {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .navbar {
+                width: 80%;
+                border-radius: 0;
+            }
+        }
+		#particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure particles are behind content */
+            
+        }
+
+        .scrollspy-example {
+            position: relative;
+            z-index: 1; /* Ensure content appears above particles */
+        }
+		.map-container {
+			position: relative;
+			width: 100%;
+			padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+			height: 0;
+			overflow: hidden;
+		}
+		
+		.map-container iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav  class="navbar navbar-expand fixed-bottom rounded-top-4 p-0" id="navbar-example2">
+        <ul class="navbar-nav nav-justified w-100 align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">
+                    <i class="fas fa-home"></i>
+                    <span class="d-block" style="font-size: 0.7rem;">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mempelai">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="d-block" style="font-size: 0.7rem;">Mempelai</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tanggal">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="d-block" style="font-size: 0.7rem;">Tanggal</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#ucapan">
+                    <i class="fa-solid fa-comments"></i>
+                    <span class="d-block" style="font-size: 0.7rem;">Ucapan</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+	<div id="particles-js"></div>
+	 <main style="" class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+
+        <section data-aos="fade-right" data-aos-duration="1500" class="container" id="home">
+            <div class="text-center pt-4">
+                <h1 style="font-size: 2.0rem;">Undangan Pernikahan</h1>
+                <div class="py-4">
+                    <div class="cropper border border-3 border-light shadow mx-auto">
+                        <img src="assets/images/1.jpeg" alt="bg" onclick="modalFoto(this)">
+                    </div>
+                </div>
+                <h1 style="font-size: 2.0rem;">Sajidah Rachmawati M.Kom <br/> & <br/> Aldy Andri Yansyah </h1>
+                <h4>Minggu 13 April 2025</h4>
+                
+                <div style="color: #ffff !important;" class="d-flex justify-content-center align-items-center mt-4 mb-2">
+                    <div style="color: #4a4049 !important;"class="mousey">
+                        <div class="scroller"></div>
+                    </div>
+                </div>
+                <p class="m-0">Scroll Down</p>
+            </div>
+        </section>
+		<section data-aos="fade-right" data-aos-duration="1500" style="" id="mempelai">
+            <div class="text-center">
+                <h1 class="py-4 px-2">Assalamualaikum Warahmatullahi Wabarakatuh</h1>
+
+                <p class="pb-3 px-3">
+                    Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat
+                    sekalian untuk menghadiri acara pernikahan kami:
+                </p>
+				<div class="row" data-aos="fade-right" data-aos-duration="2000">
+					<!-- Left Column -->
+					<!-- Left Column -->
+					<div class="col-md-4 text-center">
+						<div class="cropper border border-3 border-light shadow my-4 mx-auto">
+							<img src="assets/images/sasa.jpg" alt="bg" onclick="modalFoto(this)">
+						</div>
+						<h1 style="font-size: 2.0rem;">Sajidah Rachmawati M.Kom</h1>
+						<h5 class="mt-3 m-0">Putri</h5>
+						<p class="pb-3 px-3">Bapak H.Warfai & Ibu Hj.Anik Sufiati</p>
+					</div>
+				
+					<!-- Middle Section with the & symbol and horizontal bar -->
+					<div class="col-md-4 text-center align-self-center">
+						<div style="width: 100%; position: relative; margin-top: 2rem;margin-bottom: 2rem;">
+							<h4 style="font-size: 3rem;">&</h4>
+						</div>
+					</div>
+				
+					<!-- Right Column -->
+					<div class="col-md-4 text-center">
+						<div class="cropper border border-3 border-light shadow my-4 mx-auto">
+							<img src="assets/images/aldy.jpg" alt="bg" onclick="modalFoto(this)">
+						</div>
+						<h1 style="font-size: 2.0rem;">Aldy Andri Yansyah</h1>
+						<h5 class="mt-3 mb-0">Putra</h5>
+						<p class="mb-0">Bapak Awang Siswanto & Ibu Taniyah</p>
+					</div>
+
+
+            </div>
+        </section>
+		<hr class="mt-3 mb-2">
+		    <section id="tanggal">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class=" py-3" style="font-size: 2rem;">Waktu Menuju Acara</h1>
+                    <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
+                        <div class="row justify-content-center" data-waktu="2025-04-13 00:00:00" id="tampilan-waktu">
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="hari">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
+                            </div>
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="jam">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Jam</small>
+                            </div>
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="menit">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Menit</small>
+                            </div>
+                            <div class="col-3 p-1">
+                                <h2 class="d-inline m-0 p-0" id="detik">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Detik</small>
+                            </div>
+                        </div>
+                    </div>
+					    <div class="container">
+						<div class="text-center">
+							<p style="text-align: left; font-size: 0.9rem;" class="px-2" data-aos="fade-up" data-aos-duration="1500">
+								Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+								jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu
+								rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+								(kebesaran Allah) bagi kaum yang berpikir.
+								QS. Ar-Rum Ayat 21
+							</p>
+							<hr class="mt-3 mb-2" data-aos="fade-up" data-aos-duration="1500">
+							<p style="text-align: left; font-size: 1rem;" class="px-2" data-aos="fade-up" data-aos-duration="1500">
+								Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami akan menyelenggarakan
+								acara :
+							</p>
+                            <h1 class="px-2" data-aos="fade-up" data-aos-duration="1500" style="text-align: left; font-size: 1rem;">Resepsi</h1>
+                            <p class="px-2" data-aos="fade-up" data-aos-duration="1500" style="text-align: left;">Hari : Minggu</p>
+							<p class="px-2" data-aos="fade-up" data-aos-duration="1500" style="text-align: left;">Tanggal : 13 April 2025</p>
+							<p class="px-2" data-aos="fade-up" data-aos-duration="1500" style="text-align: left;">Pukul : 10.00 WIB - 13.00</p>
+							<p class="px-2" data-aos="fade-up" data-aos-duration="1500" style="text-align: left;">Tempat : (Gedung PKPRI GRESIK Jl. Dr. Soetomo 123 Gresik, 6111)</p>
+						</div>
+					</div>
+                    
+                    <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
+						<div class="map-container">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7917.316270565221!2d112.64515539419558!3d-7.165461064909807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd80068349129e7%3A0x9f1363f51d7e1b86!2sGedung%20Pkpri!5e0!3m2!1sen!2sid!4v1738602417221!5m2!1sen!2sid"
+							frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" crossorigin="anonymous">
+						</iframe>
+						</div>
+                        <br/>
+						<a style="color: #4a4049 !important;" href="https://maps.app.goo.gl/RDVgrcZdkf2ViZcf6" target="_blank" class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3">
+                            <i style="color: #4a4049 !important;" class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+		<hr class="mt-3 mb-2">
+		<section style="" id="end">
+				    <div class="container">
+            <div class="py-4">
+                <div class="text-center">
+                    <h1 class="mt-0 mb-3" style="font-size: 2.0rem;">Love Gift</h1>
+                    <p class="mb-1" style="font-size: 0.9rem;">
+                        Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami,
+                        dapat melalui :
+                    </p>
+
+                    <div class="overflow-x-hidden">
+                        <div class="row justify-content-center">
+                            <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;" data-aos="fade-down" data-aos-duration="1500">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/SeaBank.svg/220px-SeaBank.svg.png" class="img-fluid rounded" width="150" alt="SeaBank">
+                                <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;">
+                                   901433582260
+                                </p>
+                                <p class="card-text" style="font-size: 0.9rem;">
+                                   Sajidah Rachmawati M.Kom
+                                </p>
+                                <button class="btn btn-light btn-sm rounded-4" data-nomer="901433582260" onclick="salin(this)" autofocus>Salin No. Rekening</button>
+                            </div>
+
+                            <div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;" data-aos="fade-down" data-aos-duration="1500">
+                                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/f/fa/Bank_Mandiri_logo.svg/220px-Bank_Mandiri_logo.svg.png" class="img-fluid rounded" width="150" alt="mandiri">
+                                <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;">
+                                    1420021653638
+                                </p>
+                                <p class="card-text" style="font-size: 0.9rem;">
+                                    Aldy Andri Yansyah
+                                </p>
+                                <button class="btn btn-light btn-sm rounded-4" data-nomer="1420021653638" onclick="salin(this)" autofocus>Salin No. Rekening</button>
+                            </div>
+							
+							<div class="col-12 card-body border rounded-4 shadow p-3 m-3" style="max-width: 25rem;" data-aos="fade-down" data-aos-duration="1500">
+                                
+                                <p class="card-text mt-3 mb-0" style="font-size: 0.9rem;">
+                                    Alamat kirim kado :
+                                </p>
+                                <p class="card-text" style="font-size: 0.9rem;">
+                                    Jl. Sulawesi I No.17 Yosowilangun, Kec. Manyar, Kabupaten Gresik, Jawa Timur 61151
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+				     <div class="container">
+                <div class="text-center">
+                    <p style="font-size: 0.9rem;" class="pt-2 pb-1 px-2" data-aos="fade-up" data-aos-duration="1500">
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak / Ibu / Saudara / i.
+                        berkenan hadir untuk memberikan do'a restunya kami ucapkan terimakasih.
+                    </p>
+                    <h1 class="" data-aos="fade-up" data-aos-duration="2000">Wassalamualaikum Warahmatullahi Wabarakatuh</h1>
+                    
+                   
+                </div>
+            </div>
+        </div>
+        </section>
+		<section class="m-0 p-0" id="ucapan">
+            <div class="container">
+				<form action="https://api.saranamakmurmandiri.com/index.php" method="post">
+				<div class="card-body border rounded-4 shadow p-3">
+					<h1 class=" text-center mb-3" style="font-size: 3rem;">Ucapan & Doa</h1>
+					<input type="hidden" id="idbalasan">
+					<div class="mb-1" id="balasan"></div>
+					<div class="mb-3">
+						<label for="formnama" id="formnama" class="form-label ">Nama</label>
+						<input style="background-color: transparent; border: 1px solid #A59D84;" type="text" class="form-control shadow-sm" name="namadata">
+					</div>
+					<div class="mb-3">
+						<label for="hadiran" class="form-label" id="labelhadir">Kehadiran</label>
+						<select style="background-color: transparent; border: 1px solid #A59D84;" class="form-select shadow-sm" aria-label="selectkehadiran" name="haridan">
+							<option value="Hadir" selected>Konfirmasi Kehadiran</option>
+							<option value="Hadir">Hadir</option>
+							<option value="Berhalangan">Berhalangan</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="formpesan" class="form-label">Ucapan & Doa</label>
+						<textarea style="background-color: transparent; border: 1px solid #A59D84;" class="form-control shadow-sm" name="textdata" rows="4"></textarea>
+					</div>
+					<div class="d-grid mb-2">
+						<button style="background-color: transparent;" class="btn btn-light btn-sm rounded-4 shadow" type="submit" id="kirim">
+							Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
+						</button>
+					</div>
+				</div>
+				</form>
+				
+				
+                <div class="rounded-4 mt-4 mb-2">
+                    <div id="daftarucapan"></div>
+                </div>
+				<h1 class=" text-center mb-3" style="font-size: 3rem;">Galery</h1>
+				<div class="gallery">
+					<img src="assets/images/gal0.JPG" alt="Photo 1" onclick="openLightbox(this)">
+					<img src="assets/images/gal1.JPG" alt="Photo 2" onclick="openLightbox(this)">
+					<img src="assets/images/gal2.JPG" alt="Photo 3" onclick="openLightbox(this)">
+					<img src="assets/images/gal3.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					<img src="assets/images/gal4.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					<img src="assets/images/gal5.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					<img src="assets/images/gal6.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					<img src="assets/images/gal7.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					<img src="assets/images/gal8.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					<img src="assets/images/gal9.JPG" alt="Photo 4" onclick="openLightbox(this)">
+					
+				</div>
+			
+				<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+					<span class="close" onclick="closeLightbox()">&times;</span>
+					<img id="lightbox-img">
+				</div>
+                
+            </div>
+        </section>
+					<div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                        <div class="col-auto">
+                           
+                        </div>
+                        <div class="col-auto">
+                            <small>
+                             <br/><br/><br/><br/>
+                            </small>
+                        </div>
+                    </div>
+    </main>
+	 <hr class="mt-3 mb-2">
+	    <button type="button" id="tombol-musik" style="bottom: 9vh; display: block;" class="btn btn-light btn-sm rounded-circle btn-music" onclick="play(this)" data-status="true" data-url="assets/music/sound.mp3">
+        <i class="fa-solid fa-circle-pause"></i>
+		</button>
+    <div class="loading" id="loading" style="opacity: 1;">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
+            <div style="background-color:#ffff;color: #4a4049 !important;" class="progress w-75" role="progressbar">
+                <div style="background-color:#ffff;color: #000 !important;" class="progress-bar" id="bar" style="width: 0%">0%</div>
+            </div>
+        </div>
+    </div>
+
+	<div class="modal" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div  class="modal-dialog modal-dialog-centered modal-fullscreen m-0">
+            <div style="background-color: #A59D84; !important " class="modal-content m-0 p-0">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
+                    <div class="text-center">
+                        <h1 class=" mb-4" style="font-size: 2.0rem;"><b>The Wedding Of</b></h1>
+                        <div class="cropper border border-3 border-light shadow mb-2 mx-auto">
+                            <img src="assets/images/1.jpeg" alt="bg">
+                        </div>
+                        <h1 class=" my-4" style="font-size: 1.5rem;"><b>Sajidah<br/> & <br/>Aldy</b></h1>
+                        <div id="namatamu"></div>
+                        <button type="button" class="btn btn-light shadow rounded-4 mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buka()">
+                            <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+	 <script>
+        function openLightbox(img) {
+            document.getElementById("lightbox-img").src = img.src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+	<script>
+        const body = document.querySelector('body');
+        const colors = ['#575248', '#A59D84', '#6E6658', '#5D4C46', '#B58F78', '#8D6E63']; // Grey, Golden, Maroon
+
+        let scrollIndex = 0;
+
+        function changeBackgroundOnScroll() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPosition = window.scrollY;
+
+            // Calculate which color to apply based on scroll position
+            scrollIndex = Math.floor((scrollPosition / scrollHeight) * (colors.length - 1));
+
+            // Apply the color to the body
+            body.style.backgroundColor = colors[scrollIndex];
+        }
+
+        window.addEventListener('scroll', changeBackgroundOnScroll);
+    </script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100, // Number of particles
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" // Particle color (white)
+                },
+                "shape": {
+                    "type": "circle" // Shape of particles (firefly-like)
+                },
+                "opacity": {
+                    "value": 0.5, // Transparency of particles
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1
+                    }
+                },
+                "size": {
+                    "value": 2, // Size of particles (firefly size)
+                    "anim": {
+                        "enable": true,
+                        "speed": 3,
+                        "size_min": 0.5
+                    }
+                },
+                "line_linked": {
+                    "enable": false // No lines connecting the particles
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": false
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
