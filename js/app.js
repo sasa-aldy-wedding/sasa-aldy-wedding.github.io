@@ -260,42 +260,6 @@ const renderLoading = (num) => {
 
 
 
-const progressBar = (() => {
-    let bar = document.getElementById('bar');
-    let second = 0;
-    let counter = 0;
-    let stop = false;
-
-    const sleep = (until) => new Promise((p) => {
-        setTimeout(p, until);
-    });
-
-    const setNum = (num) => {
-        bar.style.width = num + "%";
-        bar.innerText = num + "%";
-
-        return num == 100 || stop;
-    };
-
-    (async () => {
-        while (true) {
-            if (stop || setNum(counter)) {
-                break;
-            }
-
-            await sleep(Math.exp(second));
-            second += 0.1;
-            counter += 1;
-        }
-    })();
-
-    return {
-        stop: () => {
-            stop = true;
-            setNum(100.0);
-        }
-    };
-})();
 
 const opacity = () => {
     let modal = new Promise((res) => {
@@ -309,18 +273,19 @@ const opacity = () => {
     });
 
     modal.then(() => {
-        progressBar.stop();
+        //progressBar.stop();
 
-        let op = parseInt(document.getElementById('loading').style.opacity);
+        let op = null;
         let clear = null;
 
         clear = setInterval(() => {
-            if (op >= 0) {
-                op -= 0.025;
-                document.getElementById('loading').style.opacity = op;
+            if (op = null) {
+                //op -= 0.025;
+                document.getElementById('exampleModal').classList.add('fade');
+            
             } else {
-                clearInterval(clear);
-                document.getElementById('loading').remove();
+                //clearInterval(clear);
+                //document.getElementById('loading').remove();
                 document.getElementById('exampleModal').classList.add('fade');
             }
         }, 10);
