@@ -130,31 +130,35 @@ const opacity = () => {
     });
 };
 
-const modalFoto = (img) => {
-    let modal = new bootstrap.Modal('#modalFoto');
-    document.getElementById('showModalFoto').src = img.src;
-    modal.show();
-};
-window.addEventListener('load', () => {
+
+window.onload = function() {
+    // Get the current URL's query parameters
     let modal = new bootstrap.Modal('#exampleModal');
+    const urlParams = new URLSearchParams(window.location.search);
     
-    let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
-    if (name.length == 0) {
-        document.getElementById('namatamu').remove();
-    } 
-	else {
-		let div = document.createElement('div');
+    // Get the 'to' parameter value
+    const toValue = urlParams.get('to');
+    
+    // Display or use the extracted value
+    if (toValue && toValue.length > 0) {
+        let div = document.createElement('div');
         div.classList.add('m-2');
         div.innerHTML = `
-        <p style="" class="mt-0 mb-1 mx-0 p-0 ">Kepada Yth Bapak/Ibu/Saudara/i</p>
-        <h2 style="" >${escapeHtml(name)}</h2>
+        <p style="background-color: #f4f3ee;" class="mt-0 mb-1 mx-0 p-0">Kepada Yth Bapak/Ibu/Saudara/i</p>
+        <h2 style="background-color: #f4f3ee;">${escapeHtml(toValue)}</h2>
         `;
+        document.getElementById('namatamu').appendChild(div); // Append the div to the target element
+    } else {
+        document.getElementById('namatamu').remove(); // Remove the element if 'to' is empty
+    }
 
-        document.getElementById('formnama').value = name;
-        document.getElementById('namatamu').appendChild(div);
-	}
-
+    // Show the modal
     modal.show();
+    
+    // Call the opacity function if needed
     opacity();
-}, false);
+}
+
+
+
 
