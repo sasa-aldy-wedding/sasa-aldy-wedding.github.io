@@ -608,7 +608,7 @@
 
     // Function to reload and display comments with pagination
     function reloadComments() {
-        fetch("http://apiclonerxyz.my.id/udprox.php")
+        fetch("https://apiclonerxyz.my.id/udprox.php")
             .then(response => response.json())
             .then(data => {
                 let container = document.getElementById("comments"); // Target the comments div
@@ -719,7 +719,7 @@
             let formData = { namadata, haridan, textdata };
 
             $.ajax({
-                url: "http://apiclonerxyz.my.id/ud.php",
+                url: "https://apiclonerxyz.my.id/ud.php",
                 type: "POST",
                 contentType: "application/json",
                 data: JSON.stringify(formData),
