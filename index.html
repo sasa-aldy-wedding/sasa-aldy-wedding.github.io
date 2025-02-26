@@ -675,12 +675,20 @@
 
     // Function to calculate time ago in minutes
     function timeAgo(time) {
-        let diff = Math.floor((Date.now() - new Date(time)) / 60000); // Difference in minutes
-        if (diff < 1) return "Just now";
-        if (diff < 60) return `${diff} menit yang lalu`;
-        let hours = Math.floor(diff / 60);
-        return `${hours} jam yang lalu`;
-    }
+    let diff = Math.floor((Date.now() - new Date(time)) / 60000); // Difference in minutes
+    if (diff < 1) return "Just now";
+    if (diff < 60) return `${diff} menit yang lalu`;
+    
+    let hours = Math.floor(diff / 60);
+    if (hours < 24) return `${hours} jam yang lalu`;
+
+    let days = Math.floor(hours / 24);
+    let remainingHours = hours % 24;
+
+    if (remainingHours === 0) return `${days} hari yang lalu`;
+    return `${days} hari ${remainingHours} jam yang lalu`;
+}
+
 
     // Function to go to the previous page
     function previousPage() {
